@@ -1,5 +1,5 @@
 export default {
-  base: "/bouncing-ball/",
+  base: "/kameleoon-bouncing-ball/",
   build: {
     rollupOptions: {
       output: {

@@ -4,8 +4,8 @@ import { animate, createBall } from "./helpers";
 import { State } from "./types";
 
 // -- Constants values
-export const siteCode = "0byr9yahtt";
-export const featureKey = "bb_demo";
+export const siteCode = "e4d65rerll";
+export const featureKey = "bouncing_ball_demo";
 
 // -- Define the default state
 const state: State = {
@@ -28,6 +28,8 @@ async function init(): Promise<void> {
   // -- Get the visitor code
   const visitorCode = client.getVisitorCode();
 
+  console.log(">>> visitorCode", visitorCode);
+
   // -- Reload the page when the configuration is updated
   client.onEvent(EventType.ConfigurationUpdate, () => {
     window.location.reload();
@@ -40,6 +42,8 @@ async function init(): Promise<void> {
   variables.forEach(({ key, value, type }) => {
     state[key] = value as typeof type;
   });
+
+  console.log(">>> variables", variables);
 
   // -- Main code --
   const titleElement = document.querySelector("#title > p")!;
