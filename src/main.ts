@@ -19,9 +19,12 @@ const state: State = {
   ball_color: "transparent",
   title_text: "Bouncing balls",
 };
+const configuration = {
+  updateInterval: 1,
+};
 
 // -- Configure the SDK
-const client = new KameleoonClient({ siteCode });
+const client = new KameleoonClient({ siteCode, configuration });
 
 async function init(): Promise<void> {
   // -- Initialize the SDK
