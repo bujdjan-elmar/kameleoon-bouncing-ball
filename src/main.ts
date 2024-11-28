@@ -4,8 +4,10 @@ import { animate, createBall } from "./helpers";
 import { State } from "./types";
 
 // -- Constants values
-export const siteCode = "e4d65rerll";
-export const featureKey = "bouncing_ball_demo";
+export const siteCode = "0byr9yahtt";
+export const featureKey = "bb_demo";
+//export const siteCode = "e4d65rerll";
+//export const featureKey = "bouncing_ball_demo";
 
 // -- Define the default state
 const state: State = {
